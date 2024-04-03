@@ -4,7 +4,9 @@
  * Roberto Barreda - 23354
  */
 
- public interface Comparable<E> {
-    int compareTo(E other);
+ interface PriorityQueue<E> {
+    boolean add(E element);
+    E remove();
+    boolean isEmpty();
+    int size();
 }
-
