@@ -9,19 +9,23 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ElPilar {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
-        PriorityQueue<Paciente> colaEmergencia = new VectorHeap<>();
+        PriorityQueue<Paciente> colaEmergencia = new ArbolBi<>();
 
-        // Cargar pacientes desde el archivo
+        //Cargar pacientes desde el archivo
         cargarPacientes(colaEmergencia);
 
-        // Atender pacientes uno por uno
+        //Uno por uno
         while (!colaEmergencia.isEmpty()) {
             Paciente paciente = colaEmergencia.remove();
             System.out.println("Atendiendo a: " + paciente);
         }
     }
-    
+
     private static void cargarPacientes(PriorityQueue<Paciente> colaEmergencia) {
         try {
             File archivo = new File("pacientes.txt");

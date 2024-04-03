@@ -4,13 +4,17 @@
  * Roberto Barreda - 23354
  */
 
- class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
+ class ArbolBi<E extends Comparable<E>> implements PriorityQueue<E> {
     private java.util.Vector<E> data;
 
-    public VectorHeap() {
+    public ArbolBi() {
         data = new java.util.Vector<>();
     }
-
+    
+    /** 
+     * @param value
+     * @return boolean
+     */
     @Override
     public boolean add(E value) {
         data.add(value);
@@ -25,7 +29,10 @@
         }
         return true;
     }
-
+    
+    /** 
+     * @return E
+     */
     @Override
     public E remove() {
         if (data.isEmpty()) return null;
@@ -50,12 +57,18 @@
         }
         return result;
     }
-
+    
+    /** 
+     * @return boolean
+     */
     @Override
     public boolean isEmpty() {
         return data.isEmpty();
-    }
-
+    } 
+    
+    /** 
+     * @return int
+     */
     @Override
     public int size() {
         return data.size();
