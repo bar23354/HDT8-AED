@@ -5,7 +5,6 @@
  */
 
  //import java.util.PriorityQueue;
-
  class ArbolBi<E extends Comparable<E>> implements PriorityQueue<E> {
     private java.util.Vector<E> data;
 

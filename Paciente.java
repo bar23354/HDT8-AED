@@ -14,6 +14,7 @@
         this.sintoma = sintoma;
         this.codigoEmergencia = codigoEmergencia;
     }
+
     
     /** 
      * @param otro
@@ -29,4 +30,3 @@
         return nombre + ", " + sintoma + ", " + codigoEmergencia;
     }
 }
-
