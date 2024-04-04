@@ -4,7 +4,8 @@
  * Roberto Barreda - 23354
  */
 
- class Paciente implements Comparable<Paciente> {
+import java.lang.Comparable;
+public class Paciente implements Comparable<Paciente> {
     private String nombre;
     private String sintoma;
     private char codigoEmergencia;
@@ -15,11 +16,6 @@
         this.codigoEmergencia = codigoEmergencia;
     }
 
-    
-    /** 
-     * @param otro
-     * @return int
-     */
     @Override
     public int compareTo(Paciente otro) {
         return Character.compare(this.codigoEmergencia, otro.codigoEmergencia);
